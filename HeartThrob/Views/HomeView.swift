@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
-  // MARK: - PROPERTY
   
+  // MARK: - PROPERTIES
+
   @AppStorage("home") var isHomeViewActive: Bool = false
   
   @State private var buttonWidth: Double = UIScreen.main.bounds.width - 80
@@ -30,8 +31,9 @@ struct HomeView: View {
         .ignoresSafeArea()
       
       VStack(spacing: 20) {
-        // MARK: - HEADER
         Spacer()
+        
+        // MARK: - HEADER
         
         VStack {
           Text(textTitle)
@@ -39,6 +41,8 @@ struct HomeView: View {
             .foregroundStyle(.white)
             .transition(.opacity)
           
+          // MARK: - SUBHEADER
+
           Text("""
           
           We cannot love others until we learn to love ourselves.
@@ -100,6 +104,7 @@ struct HomeView: View {
         Spacer()
         
         // MARK: - FOOTER
+        
         ZStack {
           
           // 1. BACKGROUND (STATIC)

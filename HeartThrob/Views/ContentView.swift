@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+  
+  // MARK: - PROPERTIES
   @AppStorage("home") var isHomeViewActive: Bool = true
   
+  // MARK: - BODY
   var body: some View {
     ZStack {
       if isHomeViewActive {

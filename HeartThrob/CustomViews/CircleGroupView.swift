@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CircleGroupView: View {
-  // MARK: - PROPERTY
+  // MARK: - PROPERTIES
   
   @State var shapeColor: Color
   @State var shapeOpacity: Double

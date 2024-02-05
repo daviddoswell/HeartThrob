@@ -8,7 +8,11 @@
 import Foundation
 import AVFoundation
 
+// MARK: - PROPERTIES
+
 var audioPlayer: AVAudioPlayer?
+
+// MARK: - FUNCTIONS
 
 func playSound(sound: String, type: String) {
   if let path = Bundle.main.path(forResource: sound, ofType: type) {

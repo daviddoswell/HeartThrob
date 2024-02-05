@@ -9,9 +9,14 @@ import Foundation
 import FirebaseFirestore
 
 class SessionViewModel: ObservableObject {
+  
+  // MARK: - PROPERTIES
+  
   @Published var sessions = [Session]()
   private var db = Firestore.firestore()
   
+  // MARK: - FUNCTIONS
+
   func addSession(session: Session) {
     db.collection("sessions").addDocument(data: [
       "title": session.title,
@@ -21,7 +26,7 @@ class SessionViewModel: ObservableObject {
       if let error = error {
         print("Error saving session to Firestore: \(error.localizedDescription)")
       } else {
-        self.fetchSessions() // Refresh the sessions list after adding
+        self.fetchSessions() // 1. Refresh the sessions list after adding
       }
     }
   }
