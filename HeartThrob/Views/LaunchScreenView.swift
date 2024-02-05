@@ -15,6 +15,11 @@ struct LaunchScreenView: View {
       Color.colorBlue
         .ignoresSafeArea()
       
+      Image("character-2")
+        .resizable()
+        .scaledToFit()
+        .opacity(0.5)
+      
       Image("logo")
         .resizable()
         .aspectRatio(contentMode: .fit)
