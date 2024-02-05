@@ -17,7 +17,7 @@ struct SessionListView: View {
   // MARK: - BODY
   
   var body: some View {
-    NavigationStack {
+    NavigationView {
       ZStack {
         Color.colorBlue
           .ignoresSafeArea()
@@ -31,6 +31,9 @@ struct SessionListView: View {
       } //: ZSTACK
       .navigationTitle("Sessions")
       .navigationBarBackButtonHidden(true)
+      .onAppear {
+        viewModel.fetchSessions()
+      }
       
       // MARK: - TOOLBAR
       

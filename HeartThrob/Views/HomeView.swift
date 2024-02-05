@@ -10,8 +10,8 @@ import SwiftUI
 struct HomeView: View {
   
   // MARK: - PROPERTIES
-
-  @AppStorage("home") var isHomeViewActive: Bool = false
+  
+  @AppStorage("home") var isHomeViewActive: Bool = true
   
   @State private var buttonWidth: Double = UIScreen.main.bounds.width - 80
   @State private var buttonOffset: CGFloat = 0.0

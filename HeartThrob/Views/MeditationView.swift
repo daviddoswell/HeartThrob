@@ -13,6 +13,7 @@ struct MeditationView: View {
   // MARK: - PROPERTIES
   
   @AppStorage("home") var isHomeViewActive: Bool = false
+  
   @State private var isAnimating: Bool = false
   @State private var navigationPath = NavigationPath()
   @State private var showShareSheet: Bool = false
@@ -42,7 +43,7 @@ struct MeditationView: View {
         } //: ZSTACK
         
         // MARK: - TIMER
-
+        
         if timer != nil {
           Text("\(remainingTime) seconds")
             .font(.system(size: 50.0, design: .rounded))
@@ -90,6 +91,7 @@ struct MeditationView: View {
         .controlSize(.large)
         .shadow(radius: 2)
         
+        
         // MARK: - HOME BUTTON
         
         Button(action: {
@@ -109,7 +111,7 @@ struct MeditationView: View {
       }
       
       // MARK: - SUCCESS SHEET
-
+      
       .sheet(isPresented: $showShareSheet) {
         VStack {
           Text("Congratulations on finding a moment of peace.")
@@ -135,7 +137,7 @@ struct MeditationView: View {
       }
       
       // MARK: - SESSION LIST VIEW NAVIGATION
-
+      
       .navigationDestination(for: String.self) { destination in
         if destination == "SessionListView" {
           SessionListView(viewModel: sessionViewModel)
