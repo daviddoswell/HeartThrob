@@ -1,1 +1,1 @@
-![heartthrob-blank](https://github.com/daviddoswell/heartthrob/assets/111773826/2e683f97-f794-40d8-8870-5319d20209a0)
+![logo](https://github.com/daviddoswell/HeartThrob/assets/111773826/483f2101-388f-4582-8fb1-28ac2ec59cec)
